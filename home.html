@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirpy Crunches</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+        color: #333;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        background-color: white;
+        max-width: 600px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    h1 {
+        color: #007BFF;
+    }
+    p {
+        line-height: 1.6;
+    }
+    .email, .lang-button {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .email:hover, .lang-button:hover {
+        background-color: #0056b3;
+    }
+ 
+    .lang-button {
+    background-color: #f0f0f0;
+    color: #007BFF;
+    padding: 5px 10px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+    .lang-button-container {
+        float: right;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .content {
+        display: none;
+    }
+    .content.active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-button-container">
+        <button class="lang-button" onclick="changeLanguage('en')">English</button>
+        <button class="lang-button" onclick="changeLanguage('ar')">العربية</button>
+    </div>
+    <div id="en-content" class="content active">
+        <h1>Welcome!</h1>
+        <p>Thank you for using my app. If you need anything or suggestions please contact me.</p>
+        <a href="mailto:chirpycrunches@gmail.com" class="email">Send Email</a>
+    </div>
+    <div id="ar-content" class="content">
+        <h1> اهلا وسهلا</h1>
+        <p>شكراً لأستخدامك تطبيقي. في حال عندك ملاحظات او اقتراحات رجاءً تواصل معي</p>
+        <p><strong> chirpycrunches@gmail.com</strong></p>
+        <a href="mailto:chirpycrunches@gmail.com" class="email">إرسال بريد إلكتروني</a>
+    </div>
+</div>
+<script>
+    function changeLanguage(lang) {
+        const allContents = document.querySelectorAll('.content');
+        allContents.forEach(content => {
+            content.style.display = 'none'; // Hide all content
+        });
+
+        const activeContent = document.getElementById(`${lang}-content`);
+        activeContent.style.display = 'block'; // Show the selected language content
+    }
+</script>
+</body>
+</html>
