@@ -11,14 +11,18 @@
         padding: 0;
         background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
         color: #333;
-        height: 100vh;
+        min-height: 100vh;
+        box-sizing: border-box;
+        padding: 24px 12px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
     .container {
         background-color: white;
-        max-width: 600px;
+        max-width: 720px;
+        width: 100%;
+        box-sizing: border-box;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -26,9 +30,11 @@
     h1 {
         color: #007BFF;
     }
-    p {
+    p, li {
         line-height: 1.6;
     }
+    h2 { font-size: 1.15rem; margin-top: 1.5em; }
+    a { overflow-wrap: anywhere; }
     .email, .lang-button {
         background-color: #007BFF;
         color: white;
@@ -42,7 +48,7 @@
     .email:hover, .lang-button:hover {
         background-color: #0056b3;
     }
- 
+
     .lang-button {
     background-color: #f0f0f0;
     color: #007BFF;
@@ -59,8 +65,8 @@
     color: white;
 }
     .lang-button-container {
-        float: right;
-        text-align: center;
+        float: none;
+        text-align: end;
         margin-bottom: 20px;
     }
     .content {
@@ -74,30 +80,48 @@
 <body>
 <div class="container">
     <div class="lang-button-container">
-        <button class="lang-button" onclick="changeLanguage('en')">English</button>
-        <button class="lang-button" onclick="changeLanguage('ar')">العربية</button>
+        <button class="lang-button" lang="en" onclick="changeLanguage('en')">English</button>
+        <button class="lang-button" lang="ar" onclick="changeLanguage('ar')">العربية</button>
     </div>
-    <div id="en-content" class="content active">
-        <h1>Need to Delete Your Account?</h1>
-        <p>To delete your account, please use the <strong>Delete</strong> button found in the settings of the app. Alternatively, you can request account deletion by sending us an email at <strong>chirpycrunches@gmail.com</strong></p>
-        <a href="mailto:chirpycrunches@gmail.com" class="email">Send Email</a>
+    <div id="en-content" class="content active" lang="en" dir="ltr">
+        <h1>Delete Your Chirpy Crunches Account</h1>
+        <p>Sign in with your Google account, open <strong>Settings</strong>, choose <strong>Delete Account</strong>, read the confirmation and confirm. You may be asked to sign in to Google again with the same account before deletion can proceed.</p>
+        <h2>What is deleted</h2>
+        <p>Successful in-app deletion removes your app account profile and Firebase Authentication account. These are separate steps. If you see an error, sign in again and retry, or contact support rather than assuming both steps completed.</p>
+        <h2>What remains</h2>
+        <ul>
+            <li><strong>A limited security record:</strong> your app account identifier, place submission count, ban status and deletion date, retained to prevent abuse. It does not retain your name, email, avatar, favorites or staff role. There is currently no automatic expiry; you can request a manual review using the email below. This protection applies to the same Firebase account identifier, not every new identity associated with the same person or Google account.</li>
+            <li><strong>Public place contributions and photos:</strong> published contributions remain visible unless separately removed through moderation or a support review. An account identifier may remain with a contribution or photo URL. Place photos are public assets and can remain accessible before place approval or after removal from a gallery. Account deletion does not automatically erase stored photos.</li>
+            <li><strong>Data on this device:</strong> favorites and recent search history are stored device-wide in the app, including for guests. They are not synchronized to your Google account and are not cleared by signing out or deleting the account. Remove saved items or history in the app, or clear the app's storage in Android settings to remove local app data.</li>
+        </ul>
+        <h2>Request deletion or review by email</h2>
+        <p>If you cannot use the app, or want a manual review of retained information, a public contribution or photo, email <strong>chirpycrunches@gmail.com</strong>. Explain which account or contribution the request concerns; we may need information to verify it.</p>
+        <a href="mailto:chirpycrunches@gmail.com" class="email">Email support</a>
+        <p>See the <a href="privacypolicy.html">Privacy Policy</a> for information collection and retention details.</p>
     </div>
-    <div id="ar-content" class="content">
-        <h1>هل تحتاج إلى حذف حسابك؟</h1>
-        <p>لحذف حسابك، يرجى استخدام زر <strong>حذف</strong> الموجود في إعدادات التطبيق. بدلاً من ذلك، يمكنك طلب حذف الحساب بإرسال بريد إلكتروني إلينا. </p>
-        <p><strong> chirpycrunches@gmail.com</strong></p>
-        <a href="mailto:chirpycrunches@gmail.com" class="email">إرسال بريد إلكتروني</a>
+    <div id="ar-content" class="content" lang="ar" dir="rtl">
+        <h1>حذف حسابك في Chirpy Crunches</h1>
+        <p>سجّل الدخول بحساب Google، وافتح <strong>الإعدادات</strong>، ثم اختر <strong>حذف الحساب</strong> واقرأ رسالة التأكيد وأكّد الإجراء. قد يُطلب منك تسجيل الدخول إلى Google مجددًا بالحساب نفسه قبل متابعة الحذف.</p>
+        <h2>ما الذي يُحذف؟</h2>
+        <p>تحذف العملية الناجحة ملف حسابك في التطبيق وحساب Firebase Authentication. وهما خطوتان منفصلتان. إذا ظهر خطأ، سجّل الدخول مجددًا وأعد المحاولة أو تواصل مع الدعم، ولا تفترض أن الخطوتين قد اكتملتا.</p>
+        <h2>ما الذي يبقى؟</h2>
+        <ul>
+            <li><strong>سجل أمني محدود:</strong> معرّف حسابك وعدد اقتراحات الأماكن وحالة الحظر وتاريخ الحذف، لمنع إساءة الاستخدام. لا يحتفظ هذا السجل بالاسم أو البريد الإلكتروني أو الصورة الشخصية أو المفضلة أو الدور الإداري. لا توجد حاليًا مدة انتهاء تلقائية له، ويمكنك طلب مراجعة يدوية عبر البريد أدناه. تنطبق هذه الحماية على معرّف Firebase نفسه، ولا تشمل كل هوية جديدة قد تخص الشخص نفسه أو حساب Google نفسه.</li>
+            <li><strong>مساهمات الأماكن المنشورة والصور:</strong> تبقى المساهمات المنشورة ظاهرة، ما لم تُحذف بصورة منفصلة من خلال المراجعة أو طلب الدعم. وقد يبقى معرّف الحساب مرتبطًا بالمساهمة أو ضمن رابط الصورة. صور الأماكن متاحة للعامة، وقد تظل روابطها متاحة قبل اعتماد المكان أو بعد إزالتها من المعرض. لا يؤدي حذف الحساب إلى حذف ملفات الصور المخزنة تلقائيًا.</li>
+            <li><strong>البيانات على هذا الجهاز:</strong> تُحفظ المفضلة وسجل البحث الأخير على مستوى الجهاز داخل التطبيق، للزوار أيضًا. ولا تُزامن مع حساب Google، ولا تُمسح عند تسجيل الخروج أو حذف الحساب. احذف العناصر المحفوظة أو السجل من التطبيق، أو امسح مساحة تخزين التطبيق من إعدادات Android لإزالة بياناته المحلية.</li>
+        </ul>
+        <h2>طلب الحذف أو المراجعة عبر البريد</h2>
+        <p>إذا تعذّر عليك استخدام التطبيق، أو رغبت في مراجعة يدوية لمعلومات محتفظ بها أو مساهمة منشورة أو صورة، فراسل <strong dir="ltr">chirpycrunches@gmail.com</strong>. وضّح الحساب أو المساهمة المعنية، وقد نحتاج إلى معلومات للتحقق منها.</p>
+        <a href="mailto:chirpycrunches@gmail.com" class="email">مراسلة الدعم</a>
+        <p>راجع <a href="privacypolicy.html">سياسة الخصوصية</a> للاطلاع على تفاصيل جمع المعلومات والاحتفاظ بها.</p>
     </div>
 </div>
 <script>
     function changeLanguage(lang) {
-        const allContents = document.querySelectorAll('.content');
-        allContents.forEach(content => {
-            content.style.display = 'none'; // Hide all content
+        document.querySelectorAll('.content').forEach(content => {
+            content.classList.toggle('active', content.id === `${lang}-content`);
         });
-
-        const activeContent = document.getElementById(`${lang}-content`);
-        activeContent.style.display = 'block'; // Show the selected language content
+        document.documentElement.lang = lang;
     }
 </script>
 </body>
