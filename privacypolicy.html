@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-    <html>
+    <html lang='en'>
     <head>
       <meta charset='utf-8'>
       <meta name='viewport' content='width=device-width'>
       <title>Privacy Policy</title>
-      <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; } </style>
+      <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; max-width: 850px; margin: auto; line-height: 1.65; } section[lang='ar'] { margin-top: 3em; } a { overflow-wrap: anywhere; } </style>
     </head>
     <body>
     <strong>Privacy Policy</strong> <p>
@@ -24,13 +24,66 @@
                   anyone except as described in this Privacy Policy.
                 </p> <p>
                   The terms used in this Privacy Policy have the same meanings
-                  as in our Terms and Conditions, which are accessible at
+                  as in our <a href="terms.html">Terms and Conditions</a>, which are accessible at
                   Chirpy Crunches unless otherwise defined in this Privacy Policy.
                 </p> <p><strong>Information Collection and Use</strong></p> <p>
-                  For a better experience, while using our Service, I
-                  may require you to provide us with certain personally
-                  identifiable information, including but not limited to Saleh Abdulaziz, Sal7one. The information that
-                  I request will be retained on your device and is not collected by me in any way.
+                  The standard Android app uses Firebase Authentication for Google sign-in and
+                  Cloud Firestore for account profiles and place submissions. When you sign in,
+                  the account profile can include your Firebase account identifier, Google display
+                  name, email address and avatar URL, profile creation date, staff role, ban status
+                  and place submission count. This information is stored remotely, not only on
+                  your device. It supports sign-in, moderation, submission limits, safety and support.
+                  Authorized staff can access account and submission information for these purposes.
+                </p>
+                <p><strong>Public Places and Photos</strong></p>
+                <p>
+                  Approved place details are public and can be browsed without signing in.
+                  Submissions are linked to the submitting account identifier. Published place
+                  contributions remain visible after account deletion unless separately removed
+                  through moderation or a support review.
+                </p>
+                <p>
+                  Staff can upload place photos to Firebase Storage. These are public assets:
+                  an uploaded photo URL can be accessible before the related place is approved,
+                  and after the photo is removed from a gallery. Deleting an account or removing
+                  a gallery reference does not automatically delete the stored photo. An account
+                  identifier may remain with a contribution or in a photo URL; this is not anonymous data.
+                  Contact <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>
+                  to request a review of a contribution or photo.
+                </p>
+                <p><strong>Data on Your Device</strong></p>
+                <p>
+                  Saved favorites and recent search history are held in the app's on-device Room
+                  database. They are device-wide in this version, also work for guests, and are
+                  not synchronized to your Google account. Signing out or deleting your account
+                  does not clear them. Remove saved items or search history in the app, or clear
+                  the app's storage in Android settings to remove local app data. Theme and other
+                  device preferences are also stored locally.
+                </p>
+                <p><strong>Account Deletion and Limited Security Retention</strong></p>
+                <p>
+                  In Settings, choose Delete Account and confirm. A recent Google sign-in may be
+                  required. The deletion flow removes your account profile and Firebase Authentication
+                  account; these are separate operations. If an error occurs, sign in again and retry,
+                  or contact support rather than assuming every step completed.
+                </p>
+                <p>
+                  After profile deletion, a limited security record remains: the Firebase account
+                  identifier, place submission count used for the submission limit, ban status and
+                  deletion date. The record does not retain your display name, email, avatar,
+                  favorites or staff role. It prevents the same Firebase account identifier from
+                  clearing a ban or resetting its submission limit by recreating its profile.
+                  It does not identify or block every new Firebase identity associated with the
+                  same person or Google account.
+                </p>
+                <p>
+                  There is currently no automatic expiry for this security record. For a manual
+                  review of retained information or a deletion request, contact
+                  <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>.
+                  We may need information to verify the account or contribution concerned.
+                  Public contributions, stored photos and device-local data are handled as
+                  described above. See <a href="deleteaccount.html">account deletion information</a>
+                  for the steps and retained data.
                 </p> <div><p>
                     The app does use third-party services that may collect
                     information used to identify you.
@@ -89,86 +142,66 @@
                     These Services do not address anyone under the age of 13.
                     I do not knowingly collect personally
                     identifiable information from children under 13 years of age. In the case
-                    I discover that a child under 13 has provided
-                    me with personal information, I immediately
-                    delete this from our servers. If you are a parent or guardian
-                    and you are aware that your child has provided us with
-                    personal information, please contact me so that
-                    I will be able to do the necessary actions.
+                    I discover that a child under 13 has provided personal information,
+                    or if you are a parent or guardian who believes this has happened,
+                    please contact me to request a review and deletion. The account
+                    deletion and retention information above explains the data handling.
                   </p></div> <!----> <p><strong>Changes to This Privacy Policy</strong></p> <p>
                   I may update our Privacy Policy from
                   time to time. Thus, you are advised to review this page
                   periodically for any changes. I will
                   notify you of any changes by posting the new Privacy Policy on
                   this page.
-                </p> <p>This policy is effective as of 2024-03-05</p> <p><strong>Contact Us</strong></p> <p>
-                  If you have any questions or suggestions about my
-                  Privacy Policy, do not hesitate to contact me at salehhabdulaziz@gmail.com. or at chirpycrunches@gmail.com
+                </p> <p>Last updated: 2026-10-17</p> <p><strong>Contact Us</strong></p> <p>
+                  For questions about this policy, account deletion or a review of retained
+                  information, contact <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>.
+                </p>
 
+            <section lang="ar" dir="rtl">
+              <h2>سياسة الخصوصية</h2>
+              <p>أنشأ Sal7one تطبيق Chirpy Crunches كتطبيق مجاني، وتُقدَّم الخدمة كما هي. توضح هذه الصفحة كيفية جمع المعلومات الشخصية واستخدامها ومشاركتها عند استخدام الخدمة.</p>
+              <p>تُستخدم المعلومات لتقديم الخدمة وتحسينها، ولن نستخدمها أو نشاركها إلا كما هو موضح في هذه السياسة. تحمل المصطلحات المعاني الواردة في <a href="terms.html">الشروط والأحكام</a> ما لم يُذكر خلاف ذلك.</p>
 
-            <section lang="ar">
-                سياسة الخصوصية
-قام Sal7one بتصميم تطبيق Chirpy Crunches كتطبيق مجاني. يتم توفير هذه الخدمة من قبل Sal7one دون أي تكلفة وهي مخصصة للاستخدام كما هي.
+              <p><strong>جمع المعلومات واستخدامها</strong></p>
+              <p>يستخدم تطبيق Android الأساسي Firebase Authentication لتسجيل الدخول بحساب Google، وCloud Firestore لحفظ الملفات الشخصية واقتراحات الأماكن. قد يتضمن ملف الحساب معرّف حساب Firebase والاسم الظاهر في Google والبريد الإلكتروني ورابط الصورة الشخصية وتاريخ إنشاء الملف والدور الإداري وحالة الحظر وعدد اقتراحات الأماكن. تُحفظ هذه المعلومات عن بُعد، وليست محفوظة على جهازك فقط، لدعم تسجيل الدخول والمراجعة وحدود الاقتراحات والأمان والدعم. ويمكن للموظفين المخولين الوصول إلى معلومات الحسابات والاقتراحات لهذه الأغراض.</p>
 
-تُستخدم هذه الصفحة لإبلاغ الزائرين فيما يتعلق بسياساتي فيما يتعلق بجمع المعلومات الشخصية واستخدامها والكشف عنها إذا قرر أي شخص استخدام خدمتي.
+              <p><strong>الأماكن والصور المنشورة</strong></p>
+              <p>تُعرض تفاصيل الأماكن المعتمدة للعامة، ويمكن تصفحها دون تسجيل الدخول. وترتبط الاقتراحات بمعرّف الحساب الذي أرسلها. تبقى مساهمات الأماكن المنشورة ظاهرة بعد حذف الحساب، ما لم تُحذف بصورة منفصلة من خلال المراجعة أو طلب الدعم.</p>
+              <p>يمكن للموظفين رفع صور الأماكن إلى Firebase Storage. هذه الصور متاحة للعامة؛ فقد يظل رابط الصورة متاحًا قبل اعتماد المكان المرتبط بها، وكذلك بعد إزالة الصورة من معرضه. لا يؤدي حذف الحساب أو إزالة رابط من المعرض إلى حذف ملف الصورة تلقائيًا. وقد يبقى معرّف الحساب مرتبطًا بالمساهمة أو ضمن رابط الصورة؛ وهذه ليست بيانات مجهولة الهوية. لطلب مراجعة مساهمة أو صورة، تواصل عبر <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>.</p>
 
-إذا اخترت استخدام خدمتي، فإنك توافق على جمع واستخدام المعلومات فيما يتعلق بهذه السياسة. يتم استخدام المعلومات الشخصية التي أقوم بجمعها لتوفير الخدمة وتحسينها. لن أستخدم معلوماتك أو أشاركها مع أي شخص باستثناء ما هو موضح في سياسة الخصوصية هذه.
+              <p><strong>البيانات المحفوظة على جهازك</strong></p>
+              <p>تُحفظ المفضلة وسجل البحث الأخير في قاعدة Room المحلية داخل التطبيق. وهي مشتركة على مستوى الجهاز في هذا الإصدار، وتعمل للزوار أيضًا، ولا تُزامن مع حساب Google. لا يؤدي تسجيل الخروج أو حذف الحساب إلى مسحها. احذف العناصر المحفوظة أو سجل البحث من التطبيق، أو امسح مساحة تخزين التطبيق من إعدادات Android لإزالة بياناته المحلية. تُحفظ إعدادات المظهر وتفضيلات الجهاز الأخرى محليًا أيضًا.</p>
 
-المصطلحات المستخدمة في سياسة الخصوصية هذه لها نفس المعاني كما في الشروط والأحكام الخاصة بنا، والتي يمكن الوصول إليها في Chirpy Crunches ما لم يتم تحديد خلاف ذلك في سياسة الخصوصية هذه.
+              <p><strong>حذف الحساب والاحتفاظ بسجل أمني محدود</strong></p>
+              <p>من الإعدادات، اختر «حذف الحساب» ثم أكّد الإجراء. قد يُطلب منك تسجيل الدخول إلى Google مجددًا. تحذف العملية ملف الحساب وحساب Firebase Authentication، وهما خطوتان منفصلتان. إذا ظهر خطأ، سجّل الدخول مجددًا وأعد المحاولة، أو تواصل مع الدعم، ولا تفترض أن جميع الخطوات قد اكتملت.</p>
+              <p>بعد حذف الملف الشخصي، نحتفظ بسجل أمني محدود يضم معرّف حساب Firebase وعدد اقتراحات الأماكن المستخدم لتطبيق حد الاقتراحات وحالة الحظر وتاريخ الحذف. لا يحتفظ هذا السجل بالاسم الظاهر أو البريد الإلكتروني أو الصورة الشخصية أو المفضلة أو الدور الإداري. ويمنع معرّف Firebase نفسه من إزالة الحظر أو إعادة ضبط حد الاقتراحات عبر إعادة إنشاء الملف الشخصي. لكنه لا يحدد أو يحظر كل هوية Firebase جديدة قد تخص الشخص نفسه أو حساب Google نفسه.</p>
+              <p>لا توجد حاليًا مدة انتهاء تلقائية لهذا السجل الأمني. لطلب مراجعة يدوية للمعلومات المحتفظ بها أو طلب حذف، تواصل عبر <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>. وقد نحتاج إلى معلومات للتحقق من الحساب أو المساهمة المعنية. تُعامل المساهمات المنشورة والصور المخزنة والبيانات المحلية كما هو موضح أعلاه. راجع <a href="deleteaccount.html">معلومات حذف الحساب</a> لمعرفة الخطوات والبيانات التي تبقى.</p>
 
-جمع المعلومات واستخدامها
-
-للحصول على تجربة أفضل، أثناء استخدام خدمتنا، قد أطلب منك تزويدنا ببعض المعلومات الشخصية، بما في ذلك على سبيل المثال لا الحصر صالح عبد العزيز، Sal7one. سيتم الاحتفاظ بالمعلومات التي أطلبها على جهازك ولن أقوم بجمعها بأي شكل من الأشكال.
-
-يستخدم التطبيق خدمات الجهات الخارجية التي قد تجمع المعلومات المستخدمة لتحديد هويتك.
-
-رابط إلى سياسة الخصوصية لمقدمي خدمات الطرف الثالث الذين يستخدمهم التطبيق
-
-خدمات جوجل بلاي
-تحليلات جوجل لـ Firebase
-Firebase Crashlytics
-تسجيل البيانات
-
-أريد أن أبلغك أنه عندما تستخدم خدمتي، في حالة حدوث خطأ في التطبيق، أقوم بجمع البيانات والمعلومات (من خلال منتجات الطرف الثالث) على هاتفك تسمى بيانات السجل. قد تتضمن بيانات السجل هذه معلومات مثل عنوان بروتوكول الإنترنت ("IP") بجهازك، واسم الجهاز، وإصدار نظام التشغيل، وتكوين التطبيق عند استخدام خدمتي، ووقت وتاريخ استخدامك للخدمة، وإحصائيات أخرى .
-
-بسكويت
-
-ملفات تعريف الارتباط هي ملفات تحتوي على كمية صغيرة من البيانات التي يتم استخدامها بشكل شائع كمعرفات فريدة مجهولة. ويتم إرسالها إلى متصفحك من مواقع الويب التي تزورها ويتم تخزينها على الذاكرة الداخلية لجهازك.
-
-لا تستخدم هذه الخدمة "ملفات تعريف الارتباط" هذه بشكل صريح. ومع ذلك، قد يستخدم التطبيق تعليمات برمجية ومكتبات تابعة لجهة خارجية تستخدم "ملفات تعريف الارتباط" لجمع المعلومات وتحسين خدماتها. لديك خيار قبول ملفات تعريف الارتباط هذه أو رفضها ومعرفة متى يتم إرسال ملف تعريف الارتباط إلى جهازك. إذا اخترت رفض ملفات تعريف الارتباط الخاصة بنا، فقد لا تتمكن من استخدام بعض أجزاء هذه الخدمة.
-
-مقدمي الخدمة
-
-يجوز لي توظيف شركات وأفراد من جهات خارجية للأسباب التالية:
-
-لتسهيل خدمتنا؛
-لتقديم الخدمة بالنيابة عنا؛
-لأداء الخدمات المتعلقة بالخدمة؛ أو
-لمساعدتنا في تحليل كيفية استخدام خدمتنا.
-أريد إبلاغ مستخدمي هذه الخدمة بأن هذه الأطراف الثالثة يمكنها الوصول إلى معلوماتهم الشخصية. والسبب هو أداء المهام الموكلة إليهم نيابة عنا. ومع ذلك، فهم ملزمون بعدم الكشف عن المعلومات أو استخدامها لأي غرض آخر.
-
-حماية
-
-أقدر ثقتك في تزويدنا بمعلوماتك الشخصية، وبالتالي فإننا نسعى جاهدين لاستخدام وسائل مقبولة تجاريًا لحمايتها. لكن تذكر أنه لا توجد طريقة نقل عبر الإنترنت أو طريقة تخزين إلكترونية آمنة وموثوقة بنسبة 100%، ولا يمكنني ضمان أمانها المطلق.
-
-روابط لمواقع أخرى
-
-قد تحتوي هذه الخدمة على روابط لمواقع أخرى. إذا قمت بالنقر فوق رابط جهة خارجية، فسيتم توجيهك إلى هذا الموقع. لاحظ أن هذه المواقع الخارجية لا أديرها. ولذلك أنصحك بشدة بمراجعة سياسة الخصوصية الخاصة بهذه المواقع. ليس لدي أي سيطرة ولا أتحمل أي مسؤولية عن المحتوى أو سياسات الخصوصية أو الممارسات الخاصة بأي مواقع أو خدمات تابعة لجهات خارجية.
-
-خصوصية الأطفال
-
-هذه الخدمات لا تستهدف أي شخص يقل عمره عن 13 عامًا. ولا أقوم عن قصد بجمع معلومات تعريف شخصية من الأطفال الذين تقل أعمارهم عن 13 عامًا. في حالة اكتشافي أن طفلًا أقل من 13 عامًا قد زودني بمعلومات شخصية، أقوم بحذف هذه المعلومات على الفور من خوادمنا. إذا كنت أحد الوالدين أو الوصي وكنت على علم بأن طفلك قد زودنا بمعلومات شخصية، فيرجى الاتصال بي حتى أتمكن من اتخاذ الإجراءات اللازمة.
-
-التغييرات في سياسة الخصوصية هذه
-
-يجوز لي تحديث سياسة الخصوصية الخاصة بنا من وقت لآخر. لذا ننصحك بمراجعة هذه الصفحة بشكل دوري لمعرفة أي تغييرات. وسوف أعلمك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة على هذه الصفحة.
-
-تسري هذه السياسة اعتبارًا من 2024-03-05
-
-اتصل بنا
-
-إذا كان لديك أي أسئلة أو اقتراحات حول سياسة الخصوصية الخاصة بي، فلا تتردد في الاتصال بي على Salehhabdulaziz@gmail.com. أو على chirpycrunches@gmail.com
+              <p><strong>خدمات الجهات الخارجية</strong></p>
+              <p>يستخدم التطبيق خدمات جهات خارجية قد تجمع معلومات تُستخدم للتعرف عليك. راجع سياسات الخصوصية الخاصة بها:</p>
+              <ul>
+                <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">خدمات Google Play</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
+                <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
+              </ul>
+              <p><strong>بيانات السجل</strong></p>
+              <p>عند حدوث خطأ، قد تُجمع بيانات السجل من خلال خدمات الجهات الخارجية. وقد تشمل عنوان IP واسم الجهاز وإصدار نظام التشغيل وإعدادات التطبيق ووقت الاستخدام وتاريخه وإحصاءات أخرى.</p>
+              <p><strong>ملفات تعريف الارتباط</strong></p>
+              <p>ملفات تعريف الارتباط هي ملفات صغيرة تخزنها المواقع على جهازك. لا يستخدم التطبيق هذه الملفات بصورة مباشرة، لكن بعض المكتبات والخدمات الخارجية قد تستخدمها لجمع المعلومات وتحسين خدماتها. راجع إعدادات تلك الخدمات وسياساتها؛ فقد تتأثر بعض وظائفها إذا رفضت هذه الملفات.</p>
+              <p><strong>مقدمو الخدمة</strong></p>
+              <p>قد نستعين بجهات خارجية لتقديم الخدمة وتشغيلها وتحليل استخدامها. ويمكن لهذه الجهات الوصول إلى المعلومات اللازمة لأداء مهامها، وفقًا للغرض من الخدمة وسياساتها.</p>
+              <p><strong>الأمان</strong></p>
+              <p>نسعى إلى حماية المعلومات بوسائل مناسبة، لكن لا توجد وسيلة للنقل عبر الإنترنت أو التخزين الإلكتروني آمنة تمامًا، ولا يمكن ضمان الأمان المطلق.</p>
+              <p><strong>روابط المواقع الأخرى</strong></p>
+              <p>قد تتضمن الخدمة روابط لمواقع لا نديرها. راجع سياسة الخصوصية لكل موقع تزوره؛ فنحن لا نتحكم في محتواه أو ممارساته.</p>
+              <p><strong>خصوصية الأطفال</strong></p>
+              <p>الخدمة غير موجهة لمن هم دون 13 عامًا، ولا نجمع معلوماتهم الشخصية عن علم. إذا كنت تعتقد أن طفلًا قدم معلومات شخصية، فتواصل معنا لطلب المراجعة والحذف. توضح أقسام حذف الحساب والاحتفاظ بالبيانات أعلاه كيفية التعامل مع هذه البيانات.</p>
+              <p><strong>تغييرات سياسة الخصوصية</strong></p>
+              <p>قد نحدّث هذه السياسة من وقت لآخر، وستُنشر التغييرات على هذه الصفحة. يُرجى مراجعتها دوريًا.</p>
+              <p>آخر تحديث: 2026-10-17</p>
+              <p><strong>التواصل</strong></p>
+              <p>للاستفسار عن هذه السياسة أو حذف الحساب أو مراجعة معلومات محتفظ بها، راسل <a href="mailto:chirpycrunches@gmail.com">chirpycrunches@gmail.com</a>.</p>
             </section>
     </body>
     </html>
-      
+
